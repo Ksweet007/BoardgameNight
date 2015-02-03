@@ -1,0 +1,40 @@
+﻿@using Microsoft.CSharp.RuntimeBinder
+@model IEnumerable<BoardgameNight.Core.Model.Boardgame>
+@{
+    ViewBag.Title = "Index";          
+}
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BoardgameName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasBeenPlayed)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoardgameName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasBeenPlayed)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BoardgameId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BoardgameId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BoardgameId })
+            </td>
+        </tr>
+    }
+
+</table>

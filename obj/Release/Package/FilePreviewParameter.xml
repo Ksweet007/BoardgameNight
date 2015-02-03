@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="www.kylesweetstuff.com" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\kyle\.sweet\\Desktop\\GameNight\\BoardGameNight\\BoardGameNight\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\kyle\.sweet\\Desktop\\GameNight\\BoardGameNight\\BoardGameNight\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="www.kylesweetstuff.com/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\kyle\.sweet\\Desktop\\GameNight\\BoardGameNight\\BoardGameNight\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="BoardgameDBContext-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\BoardgameDB.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kyle\.sweet\\Desktop\\GameNight\\BoardGameNight\\BoardGameNight\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BoardgameDBContext']/@connectionString" />
+  </parameter>
+</parameters>
